@@ -9,7 +9,7 @@ app.use('/api',EquipoRouter);
 const main = async () => {
     try {
         await sequelize.authenticate();
-        await sequelize.sync({ force:true});
+        await sequelize.sync({ force:false});
         console.log('Conexión establecida correctamente.');
 
         app.listen(port, () => {
@@ -19,5 +19,4 @@ const main = async () => {
         console.error(`Error de conexión: ${error}`);
     }
 };
-
 main();
