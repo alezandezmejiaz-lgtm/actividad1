@@ -19,7 +19,7 @@ export const  Equipo = sequelize.define(
                 notNull:{msg:'El nombre del equipo  debe ser obligatorio'},
                 notEmpty:true,
                 len:{
-                args:[10,100],
+                args:[5,100],
                 msg:'El nombre del equipo  debe tener entre 5 y 100 caracteres'
                 }
         }
@@ -31,7 +31,7 @@ Ciudad:{
             notNull:{msg:'El nombre de la ciudad debe ser obligatorio'},
             notEmpty:true,
             len:{
-                args:[10,100],
+                args:[5,100],
                 msg:'El nombre de la Ciudad debe tener entre 5 y 100 caracteres'
             }
         }
@@ -43,7 +43,7 @@ Ciudad:{
             notNull:{msg:'El nombre  del país  debe ser obligatorio'},
             notEmpty:true,
             len:{
-                args:[10,100],
+                args:[5,100],
                 msg:'El nombre  del país debe tener entre 5 y 100 caracteres'
             }
         }
