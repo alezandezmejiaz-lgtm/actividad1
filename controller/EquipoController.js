@@ -9,3 +9,16 @@ export const getAllEquipos = async (req,res)=>{
     return res.status(500).json({error:'error al obtener todos los datos de equipos'});
 }
 };
+export const getEquipoById = async(req,res)=>{
+try{
+    const {id}= req.params;
+    const equipo = await Equipo.findByPk(id);
+    if(!equipo){
+        return res.status(404).json({error:'equipo no encontrada'});
+    }
+    return res.json(equipo);
+}catch(error){
+    console.log('error al obtener el equipo',error);
+    return res.status(500).json({error:'error al obtener el  equipo'});
+}
+};
