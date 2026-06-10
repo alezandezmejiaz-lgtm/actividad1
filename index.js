@@ -14,7 +14,7 @@ const main = async () => {
         console.log('Conexión establecida correctamente.');
 
         app.listen(port, () => {
-            console.log(`Servidor corriendo en el puerto ${port}`);
+            console.log(`Servidor corriendo en el puerto  de ${port}`);
         });
     } catch (error) {
         console.error(`Error de conexión: ${error}`);
