@@ -22,3 +22,13 @@ try{
     return res.status(500).json({error:'error al obtener el  equipo'});
 }
 };
+
+export const createEquipo =async(req,res)=>{
+try{
+    const nuevaEquipo = await Equipo.create(req.body);
+    return res.status(201).json(nuevaEquipo);
+}catch(error){
+    console.log('error al crear la persona ',error);
+    return res.status(500).json({error:'error al crear la persona '});
+}
+};
